@@ -1,49 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shubhojeet Dutta | Product Manager</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
-      line-height: 1.6;
+    :root {
+      --primary: #2563eb;
+      --dark: #0f172a;
+      --gray: #475569;
+      --light: #f8fafc;
+      --card: #ffffff;
     }
-    h1 { color: #1f2937; }
-    h2 { color: #374151; }
-    a { color: #2563eb; text-decoration: none; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-right: 12px;
+      font-weight: 600;
+    }
+
+    .primary-btn {
+      background: var(--primary);
+      color: white;
+    }
+
+    .secondary-btn {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      margin-top: 80px;
+    }
+
+    section h2 {
+      font-size: 30px;
+      margin-bottom: 24px;
+    }
+
+    /* ---------- CARDS ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skills span {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #1e3a8a;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin: 6px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <h1>Shubhojeet Dutta</h1>
-  <p><b>Product Manager – Digital Lending</b></p>
+  <div class="container hero">
+    <div>
+      <h1>Shubhojeet <span>Dutta</span></h1>
+      <p>
+        Product Manager at ICICI Bank, building end-to-end digital lending
+        products across secured assets. MBA from IIM Jammu with strong focus
+        on strategy, analytics, and customer experience.
+      </p>
+      <div class="cta">
+        <a class="primary-btn" href="#">Download Resume</a>
+        <a class="secondary-btn" href="#">LinkedIn Profile</a>
+      </div>
+    </div>
+  </div>
 
-  <h2>About Me</h2>
-  <p>
-    MBA from IIM Jammu and Product Manager at ICICI Bank.
-    I build end-to-end digital lending products like
-    Loan Against Shares, Mutual Funds, and Sovereign Gold Bonds.
-  </p>
+  <div class="container">
 
-  <h2>Experience</h2>
-  <ul>
-    <li><b>ICICI Bank</b> – Product Manager (Digital Lending)</li>
-  </ul>
+    <!-- ABOUT -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a Product Manager in the Digital Lending team at ICICI Bank,
+        owning the complete product lifecycle from ideation to post-launch
+        optimization. I specialize in secured lending products including
+        Loan Against Shares (LAS), Loan Against Mutual Funds (LAMF),
+        and Loan Against Sovereign Gold Bonds (LASGB).
+      </p>
+    </section>
 
-  <h2>Key Projects</h2>
-  <ul>
-    <li>Loan Against Shares (LAS) – Built from scratch</li>
-    <li>Loan Against Mutual Funds (LAMF)</li>
-    <li>Loan Against Sovereign Gold Bonds (LASGB)</li>
-  </ul>
+    <!-- EXPERIENCE -->
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="card">
+        <h3>ICICI Bank — Product Manager (Digital Lending)</h3>
+        <p>
+          • Built and launched LAS, LAMF, and LASGB journeys across iMobile and NetBanking<br>
+          • Managed 30+ APIs covering KYC, eligibility, lien marking, eSign, and disbursal<br>
+          • Led UCJ migration creating unified journeys for ICICI & Non-ICICI Demat users<br>
+          • Improved conversion via journey resumption, CRM triggers, and UX optimizations<br>
+          • Worked cross-functionally with Tech, Risk, Legal, Ops, and Marketing teams
+        </p>
+      </div>
+    </section>
 
-  <h2>Contact</h2>
-  <p>
-    Email: shubhojeet.dutta.official@gmail.com <br>
-    LinkedIn: <a href="#">https://www.linkedin.com/in/shubhojeet-dutta/</a>
-  </p>
+    <!-- PROJECTS -->
+    <section>
+      <h2>Key Product Case Studies</h2>
+      <div class="grid">
+
+        <div class="card">
+          <h3>Loan Against Shares (LAS)</h3>
+          <p>
+            Built from scratch with 50% LTV, real-time eligibility,
+            NSDL pledge integration, and automated OD creation.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Loan Against Mutual Funds (LAMF)</h3>
+          <p>
+            Designed CAS-based fund discovery, CAMS lien marking,
+            and equity/debt based OD mapping for PA and Non-PA users.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Loan Against Sovereign Gold Bonds (LASGB)</h3>
+          <p>
+            Exclusive pre-approved digital journey with Demat validation,
+            backend trade block, and end-to-end eSign automation.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Skills & Tools</h2>
+      <div class="skills">
+        <span>Product Strategy</span>
+        <span>Digital Lending</span>
+        <span>User Journey Design</span>
+        <span>API Integration</span>
+        <span>PRD & User Stories</span>
+        <span>Analytics (Adobe, GA)</span>
+        <span>CRM Automation</span>
+        <span>Figma</span>
+        <span>JIRA</span>
+        <span>Whimsical / Miro</span>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 Shubhojeet Dutta · Product Manager · ICICI Bank
+  </footer>
 
 </body>
 </html>
